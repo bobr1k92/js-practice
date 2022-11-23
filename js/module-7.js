@@ -89,28 +89,28 @@ const images = [
     },
   ];
 
-const imagesContainer = document.querySelector('.images-gallery');
-const imgModal = document.querySelector('.image-modal-overlay');
-const modalContent = document.querySelector('.image-modal')
+// const imagesContainer = document.querySelector('.images-gallery');
+// const imgModal = document.querySelector('.image-modal-overlay');
+// const modalContent = document.querySelector('.image-modal')
 
-images.forEach(({src, title}) => {
+// images.forEach(({src, title}) => {
 
-    const imgEl = document.createElement('img');
+//     const imgEl = document.createElement('img');
 
-    imgEl.src = src;
-    imgEl.alt = title;
+//     imgEl.src = src;
+//     imgEl.alt = title;
 
-    imagesContainer.append(imgEl)
-})
+//     imagesContainer.append(imgEl)
+// })
 
-imagesContainer.addEventListener('click', e => {
-    if(e.target.nodeName === 'IMG') {
+// imagesContainer.addEventListener('click', e => {
+//     if(e.target.nodeName === 'IMG') {
 
-    modalContent.innerHTML = e.target.getAttribute('alt')
-    imgModal.classList.add('visible')
-    }
-});
+//     modalContent.innerHTML = e.target.getAttribute('alt')
+//     imgModal.classList.add('visible')
+//     }
+// });
 
-imgModal.addEventListener('click', e => {
-e.currentTarget.classList.remove('visible')
-})
+// imgModal.addEventListener('click', e => {
+// e.currentTarget.classList.remove('visible')
+// })
