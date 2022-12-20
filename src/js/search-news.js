@@ -1,4 +1,4 @@
-
+import axios from "axios";
 /**
  * Одна стаття має
  * 1. Заголовок
@@ -20,11 +20,24 @@ const searchField = document.getElementById('searchNewsField');
 const articlesContainer = document.getElementById('articles');
 
 searchBtnRef.addEventListener('click', e => {
-    getNews ({
+  getNewsAxios ({
         query: searchField.value
     })
     console.log(query);
 });
+
+function getNewsAxios({query}){
+  const urlAPI = `https://newsapi.org/v2/everything?q=${query}&from=2022-12-12&apiKey=${API_KEY}`
+  axios.get(urlAPI)
+  .then(res => res.data)
+  .then(({articles}) => {
+    render(articles); 
+  })
+  .catch(function (error) {
+    // обработка ошибки
+    console.log(error);
+  })
+}
 
 function getNews({query}) {
     const urlAPI = `https://newsapi.org/v2/everything?q=${query}&from=2022-12-12&apiKey=${API_KEY}`
@@ -38,7 +51,8 @@ function getNews({query}) {
   .then(({articles}) => {
     render(articles);  
   })
-}
+};
+
 
 function render(articles) {
     articlesContainer.innerHTML = '';
