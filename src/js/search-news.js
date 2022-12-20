@@ -39,19 +39,19 @@ function getNewsAxios({query}){
   })
 }
 
-function getNews({query}) {
-    const urlAPI = `https://newsapi.org/v2/everything?q=${query}&from=2022-12-12&apiKey=${API_KEY}`
+// function getNews({query}) {
+//     const urlAPI = `https://newsapi.org/v2/everything?q=${query}&from=2022-12-12&apiKey=${API_KEY}`
 
-    fetch(urlAPI).then(res => {
-    if (!res.ok) {
-        throw new Error(res.message)
-    }
-    return res.json()
-  })
-  .then(({articles}) => {
-    render(articles);  
-  })
-};
+//     fetch(urlAPI).then(res => {
+//     if (!res.ok) {
+//         throw new Error(res.message)
+//     }
+//     return res.json()
+//   })
+//   .then(({articles}) => {
+//     render(articles);  
+//   })
+// };
 
 
 function render(articles) {
