@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown timer</title>
+    <link rel="stylesheet" href="css/common.css" />
+  </head>
+  <body>
+    <p><a href="index.html">Go back</a></p>
+
+    <form class="form-inline js-search-form">
+      <div class="form-group">
+        <!-- <label for="searchQuery" class="searchQuery">Что ищем?</label> -->
+        <input
+          type="text"
+          class="form-control"
+          name="query"
+          id="searchQuery"
+          placeholder="Что ищем?"
+          autocomplete="off"
+        />
+      </div>
+      <button type="submit" class="btn btn-ml">Искать</button>
+    </form>
+
+    <ul class="articles js-articles-container"></ul>
+
+    <button type="button" class="btn btn-mg-auto" data-action="load-more">
+      <span class="label">Показать ещё</span>
+    </button>
+
+    <script src="js/search-cat.js" type="module"></script>
+  </body>
+</html>

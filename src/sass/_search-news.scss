@@ -1,0 +1,15 @@
+section#articles {
+  display: flex;
+  width: 80vw;
+}
+
+article.news {
+  border-radius: 4px;
+  border: 1px solid #908a8a;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+article.news img {
+  min-width: 300px;
+}
